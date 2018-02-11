@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+		<title>Wist</title>
+	</head>
+	<body>
+		<audio id="beep" src="beep.wav"></audio>
+		<audio id="beep2" src="beep.wav"></audio>
+		<audio id="select1" src="select.wav"></audio>
+		<div class="grid">
+			<button id="home" onmouseover="beep()" onclick="window.location='index.html'; select();">Home</button>
+			<button id="about" onmouseover="beep()" onclick="about(); select();">About</button>
+			<button id="games" onmouseover="beep()" onclick="showGames(); select();">Games</button>
+			<button id="contact" onmouseover="beep()" onclick="openContact(); select();">Contact</button>
+			<button id="options" onmouseover="beep()" onclick="openOptions(); select();">Options</button>
+
+			<button class="contactMenu" onmouseover="beep()" onclick="location.href='https://www.facebook.com/pedro.figueiredo.5686'; select();">Facebook</button>
+			<button class="contactMenu" onmouseover="beep()" onclick="location.href='https://www.instagram.com/pedromigueiredo/'; select();">Instagram</button>
+			<button class="contactMenu" onmouseover="beep()" onclick="location.href='https://twitter.com/pedromigueiredo'; select();">Twitter</button>
+			<button class="contactMenu" onmouseover="beep()" onclick="select();">E-mail</button>
+
+			<button id="option1" onmouseover="beep()" class="optionsMenu" onclick="pt(); select();">Português</button>
+			<button id="option2" onmouseover="beep()" class="optionsMenu" onclick="en(); select();">English</button>
+			<button id="option3" onmouseover="beep()" class="optionsMenu" onclick="jp(); select();">Japanese</button>
+						
+		</div>
+
+		<span id="name">Pedro Figueiredo
+		<p id="aboutText"></p>
+		</span>
+
+		<div id="gameList">
+
+			<div id="insurrectionDiv" onclick="select(); window.location='https://8-bitforgers.itch.io/insurrection';">
+				<a id="insurrectionSrc" onmouseover="beep()"></a>
+				<p id="insurrectionInfo">A cinematic platformer in a post-war world.</p>
+			</div>
+
+			<div id="dropDiv" onclick="select(); window.location='Drop/index.html';">
+				<p id="dropTitle" onmouseover="beep()">Drop</p>
+				<p id="dropInfo">A desolate other world.</p>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>
