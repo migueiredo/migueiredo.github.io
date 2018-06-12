@@ -147,29 +147,3 @@ p:active {
 	top: 5%;
 	left: 5%;
 }
-
-@media only screen and (max-width: 800px) {
-	#center {
-	margin-top: 40%;
-	}
-
-	h1 {
-		font-size: 42pt;
-	}
-
-	p {
-		font-size: 28pt;
-	}
-
-	h2 {
-		font-size: 28pt;
-	}
-
-	h3 {
-		font-size: 24pt;
-	}
-
-	h4 {
-		font-size: 18pt;
-	}
-}
