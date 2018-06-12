@@ -1,267 +1,149 @@
 * {
 	margin: 0;
+	padding-top: 0;
+	color: rgba(255,255,255,0.8);
 }
 
 body {
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-	background-attachment: fixed;
-	background-image: url("1.jpg");
-	background-color: black;
+	font-family: "Montserrat";
+	background-color: rgba(0,0,0,1);
 }
 
-#sobre {
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-	background-attachment: fixed;
-	background-image: url("about.jpeg");
-}
-
-.grid {
-	display: grid;
-	grid-gap: 0px;
-	grid-auto-rows: minmax(50px, auto);
-	grid-template-columns: 20% 1fr 1fr 1fr 1fr 1fr 20%;
-	grid-template-rows: 50px;
-}
-
-#name {
+#bg {
+	top: 0;
 	position: fixed;
-	bottom: 50%;
+	z-index: -2;
 	width: 100vw;
-	text-align: center;
-	font-family: 'Pocket Red';
-	font-size: 72pt;
-	background: none;
-	border: none;
-	color: white;
-   	text-shadow: 0 0 2px rgba(255,255,255,1);
-   	z-index: -1;
+	height: 100vh;
+	object-fit: cover;
 }
 
-#aboutText {
+#cover {
 	position: fixed;
-	text-align: center;
+	top: 0;
 	width: 100%;
-	font-family: 'Pocket Blue';
+	height: 100%;
+	z-index: -1;
+	background-color: rgba(0,0,0,0.5);
+	visibility: hidden;
+}
+
+#center {
+	margin-top: 18%;
+	text-align: center;
+	text-shadow: 0 0 1px white;
+	z-index: 1;
+}
+
+h1 {
+	font-weight: 300;
+}
+
+h2 {
+	font-weight: 400;
 	font-size: 24pt;
-	line-height: 26pt;
+	text-shadow: 0 0 1px white;
+}
+
+h3 {
+	font-weight: 500;
+}
+
+h4 {
+	font-weight: 500;
+	font-size: 12pt;
+	width: 50%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0 1 2px black;
 	color: white;
-   	text-shadow: 0 0 2px rgba(255,255,255,1);
-   	z-index: -1;
 }
 
 p {
-	margin-top: -20px;
-	line-height: 26pt;
-	font-family: 'Pocket Blue';
-	font-size: 24pt;
-	color: white;
-   	z-index: -1;
-}
-
-#home {
-	grid-column-start: 2;
-}
-
-#about {
-	grid-column-start: 3;
-}
-
-#games {
-	grid-column-start: 4;
-}
-
-#contact {
-	grid-column-start: 5;
-}
-
-#options {
-	grid-row-start: 1;
-	grid-column-start: 6;
-}
-
-button {
-	min-width: 42px;
-	width: 100%;
-	text-align: center;
-	font-family: 'Pocket Blue';
-	color: white;
-	font-size: 24pt;
-	border: none;
-	background: rgba(255,255,255, 0.1);
-   	text-shadow: 0 0 1px rgba(255,255,255,1);
-   	cursor: url("cursor.png") 4 4, auto;
-   	z-index: 3;
-}
-
-button:hover {
-	background: rgba(255,255,255, 0.2);
-   	text-shadow: 0 0 2px rgba(255,255,255,1);
-}
-
-button:active {
-	background: rgba(255,255,255, 0.4);
-   	text-shadow: 0 0 4px rgba(255,255,255,1);
-}
-
-.contactMenu {
-	visibility: hidden;
-	grid-column-start: 5;
-}
-
-.optionsMenu {
-	visibility: hidden;
-	grid-column-start: 6;
-}
-
-#option1{
-	grid-row-start: 2;
-}
-
-#option2{
-	grid-row-start: 3;
-}
-#option3{
-	grid-row-start: 4;
-}
-
-#gameList {
+	font-weight: 300;
+	font-size: 18pt;
+	text-shadow: 0 0 1px white;
 	position: fixed;
-	bottom: 14%;
-	width: 100%;
-	visibility: hidden;
-}
-
-#insurrectionDiv {
-	padding-bottom: 2%;
-	width: 100%;
 	text-align: center;
-	filter: drop-shadow(0px 0px 2px rgba(255,255,255, 0.8));
+	background-color: rgba(255,255,255,0.2);
+	padding-left: 8px;
+	padding-right: 8px;
+	transition: background-color 0.2s, font-size 0.2s;
 }
 
-#dropDiv {
-	padding-top: 5%;
-	padding-bottom: 2%;
-	width: 100%;
+p:hover {
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.5);
+	font-size: 18.4pt;
+}
+
+p:active {
+	background-color: rgba(255,255,255,0.4);
+	font-size: 18.2pt;
+}
+
+#web {
+	left: 12%;
+	top: 25%;
+}
+
+#anim {
+	left: 12%;
+	top: 45%;
+}
+
+#jogos {
+	left: 12%;
+	top: 65%;
+}
+
+#ins {
+	right: 12%;
+	top: 25%;
+}
+
+#graf {
+	right: 12%;
+	top: 45%;
+}
+
+#ui {
+	right: 12%;
+	top: 65%;
+}
+
+#webCanvas {
+	display: none;
+	margin-top: 10%;
 	text-align: center;
-	filter: drop-shadow(0px 0px 2px rgba(255,255,255, 0.8));
 }
 
-#dropDiv:hover {
-	background-color: rgba(255,255,255,0.2);
-	cursor: pointer;
+#animCanvas {
+	display: none;
+	margin-top: 10%;
+	text-align: center;
 }
 
-#dropTitle {
-	font-size: 60pt;
-	padding-bottom: 5%;
+#jogosCanvas {
+	display: none;
+	margin-top: 10%;
+	text-align: center;
 }
 
-#insurrectionDiv:hover {
-	background-color: rgba(255,255,255,0.2);
-	cursor: pointer;
+#grafCanvas {
+	display: none;
+	margin-top: 10%;
+	text-align: center;
 }
 
-#insurrectionSrc::after {
-	content: url("insurrection.png");
+#uiCanvas {
+	display: none;
+	margin-top: 10%;
+	text-align: center;
 }
 
-@font-face {
-    font-family: "Pocket Red";
-    src: url('PocketRed.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: "Pocket Blue";
-    src: url('PocketBlue.ttf') format("truetype");
-}
-
-@media only screen and (max-width: 670px) {
-	.grid {
-		display: grid;
-		grid-gap: 0px;
-		grid-auto-rows: minmax(50px, auto);
-		grid-template-columns: 15% 1fr 1fr 1fr 1fr 1fr 15%;
-		grid-template-rows: 50px;
-	}
-
-	#name {
-		grid-row-start: 5;
-		grid-row-end: span 1;
-		grid-column-start: 2;
-		grid-column-end: span 5; 
-		text-align: center;
-		font-family: 'Pocket Red';
-		color: white;
-		font-size: 48pt;
-		background: none;
-		border: none;
-	}
-
-	#textAbout {
-		grid-row-start: 4;
-		grid-row-end: span 1;
-		grid-column-start: 2;
-		grid-column-end: span 4; 
-		text-align: center;
-		font-family: 'Pocket Red';
-		font-size: 24pt;
-		background: none;
-		border: none;
-		color: transparent;
-	   	text-shadow: 0 0 2px rgba(255,255,255,1);
-	}
-
-	p {
-		font-size: 12pt;
-	}
-
-	button {
-		font-size: 12pt;
-		background: rgba(255,255,255, 0.1);
-	}
-	button:hover {
-		background: rgba(255,255,255, 0.2);
-	}
-
-	button:active {
-		background: rgba(255,255,255, 0.4);
-	}
-
-	#option1, #option2, #option3, .contactMenu {
-		background: rgba(0,0,0, 0.7);
-	}
-
-	#option1:hover, #option2:hover, #option3:hover, .contactMenu:hover {
-		background: rgba(0,0,0, 0.5);
-	}
-
-	#option1:active, #option2:active, #option3:active, .contactMenu:active {
-		background: rgba(0,0,0, 0.4);
-	}
-
-	#gameList {
-		position: fixed;
-		bottom: 24%;
-	}
-
-	#insurrectionDiv {
-		padding-bottom: 0px;
-	}
-
-	#insurrectionSrc::after {
-		content: url("insurrectionSmall.png");
-	}
-
-	#dropDiv {
-		padding-top: 8%;
-		padding-bottom: 2%;
-	}
-
-	#dropTitle {
-		font-size: 36pt;
-	}
+.back {
+	top: 5%;
+	left: 5%;
 }

@@ -3,47 +3,219 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="index.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-		<title>Wist</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet"> 
+		<title>Pedro Figueiredo | Portefólio</title>
 	</head>
 	<body>
-		<audio id="beep" src="beep.wav"></audio>
-		<audio id="beep2" src="beep.wav"></audio>
-		<audio id="select1" src="select.wav"></audio>
-		<div class="grid">
-			<button id="home" onmouseover="beep()" onclick="window.location='index.html'; select();">Home</button>
-			<button id="about" onmouseover="beep()" onclick="about(); select();">About</button>
-			<button id="games" onmouseover="beep()" onclick="showGames(); select();">Games</button>
-			<button id="contact" onmouseover="beep()" onclick="openContact(); select();">Contact</button>
-			<button id="options" onmouseover="beep()" onclick="openOptions(); select();">Options</button>
+		<div id="cover"></div>
+		<img id="bg" src="images/bgSmall.jpg">
 
-			<button class="contactMenu" onmouseover="beep()" onclick="location.href='https://www.facebook.com/pedro.figueiredo.5686'; select();">Facebook</button>
-			<button class="contactMenu" onmouseover="beep()" onclick="location.href='https://www.instagram.com/pedromigueiredo/'; select();">Instagram</button>
-			<button class="contactMenu" onmouseover="beep()" onclick="location.href='https://twitter.com/pedromigueiredo'; select();">Twitter</button>
-			<button class="contactMenu" onmouseover="beep()" onclick="select();">E-mail</button>
 
-			<button id="option1" onmouseover="beep()" class="optionsMenu" onclick="pt(); select();">Português</button>
-			<button id="option2" onmouseover="beep()" class="optionsMenu" onclick="en(); select();">English</button>
-			<button id="option3" onmouseover="beep()" class="optionsMenu" onclick="jp(); select();">Japanese</button>
-						
+		<div id="menu">
+			<div id="center">
+				<h1>Pedro Figueiredo</h1>
+				<h3>Designer Multimédia</h3>
+			</div>
+
+			<p id="web" onclick="showWeb();">Web Design</p>
+			<p id="anim" onclick="showAnim();">Animação</p>
+			<p id="jogos" onclick="showJogos();">Jogos</p>
+			<p id="ins" onclick="window.location='Instalacao Interativa/index.html';">Instalação Interativa</p>
+			<p id="graf" onclick="showGraf();">Design Gráfico</p>
+			<p id="ui" onclick="showUI();">UI Design</p>
 		</div>
 
-		<span id="name">Pedro Figueiredo
-		<p id="aboutText"></p>
-		</span>
+		<div id="webCanvas">
+			<p class="back" onclick="showWeb();">Back</p>
 
-		<div id="gameList">
+			<h2>Marble.</h2>
+			<br>
+			<br>
+			<img src="images/marble1.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Uma revista online baseada no "Whole Earth Catalog", realizada no âmbito da cadeira de "Projeto 3" da licenciatura em Design e Multimédia da Universidade de Coimbra. Implementada com recurso a "October CMS" e CSS Grid.</h4>
+			<br>
+			<br>
+			<img src="images/marble2.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>A revista é bilingue, disponível em português e inglês. A edição criada contém 15 artigos e foram criadas uma versão web e uma versão impressa. A versão impressa foi paginada pelos meus colegas de grupo, Mário Abrantes e Inês Dias, enquanto a parte web foi inteiramente implementada por mim.</h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>Vinyl Records</h2>
+			<br>
+			<br>
+			<img src="images/vinyl1.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Uma loja de discos vinis fictícia, realizada no âmbito da cadeira de "Sistemas Informáticos" da licenciatura em Design e Multimédia da Universidade de Coimbra. Implementada com recurso a PHP, MySQL e CSS Grid.</h4>
+			<br>
+			<br>
+			<img src="images/vinyl2.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Este foi um trabalho de grupo, realizado por mim e por Beatriz Araújo. Ambos participámos nas diferentes fases do projeto, desde a criação de mockups à implementação dos mesmos.</h4>
+			<br>
+			<br>
+			<img src="images/vinyl3.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Tanto eu como a Beatriz somos fãs de uma estética retro e de pixel art e, por este motivo, decidimos criar uma loja de vinis de bandas sonoras de jogos clássicos, aludindo a esta estética no design do site.</h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>unClassified</h2>
+			<br>
+			<br>
+			<img src="images/unclassified1.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Uma aplicação de apoio a agentes imobiliários criada no âmbito da cadeira de "Engenharia de Software" da licenciatura em Design e Multimédia da Universidade de Coimbra.</h4>
+			<br>
+			<br>
+			<img src="images/unclassified2.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Os meus cargos incluíram vice-gestor de projeto, developer front-end e fui encarregue da criação de mockups para o documento de requisitos.</h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>Instantâneos</h2>
+			<br>
+			<br>
+			<img src="images/Instantaneos.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Uma instalação interativa realizado por mim, por Nuno Martins e por Luís Azevedo no âmbito da cadeira de "Projeto 4" da licenciatura em Design e Multimédia da Universidade de Coimbra. <br><br>O meu papel foi a criação deste site de documentação, a criação da animação utilizada na instalação e a programação relativa à instalação em si, que incluí Arduíno e Processing. <br><br>Mais informação disponível no site, <a href="Instalacao Interativa/index.html">clicando aqui.</a></h4>
+			<br>
+			<br>
+			<br>
+			<br>
 
-			<div id="insurrectionDiv" onclick="select(); window.location='https://8-bitforgers.itch.io/insurrection';">
-				<a id="insurrectionSrc" onmouseover="beep()"></a>
-				<p id="insurrectionInfo">A cinematic platformer in a post-war world.</p>
-			</div>
+		</div>
+		<div id="animCanvas">
+			<p class="back" onclick="showAnim();">Back</p>
+			<h2>The Sudden Walk</h2>
+			<br>
+			<video controls src="video/The Sudden Walk.mp4" width="50%"></video>
+			<br>
+			<br>
+			<h4>Uma animação baseada na "short story" de Franz Kafka, "The Sudden Walk".</h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>entre mundos</h2>
+			<br>
+			<video controls src="video/entre mundos.mp4" width="50%"></video>
+			<br>
+			<br>
+			<h4>Uma dream sequence ritualística que explora a sobreposição de animação 2D com stop motion.</h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>Instantâneos</h2>
+			<br>
+			<video controls src="video/Instantaneos.mp4" width="50%"></video>
+			<br>
+			<br>
+			<h4>Uma interpretação do capítulo "Instantâneos" da obra "A Ilustre Máquina de Ramires" de António Pocinho, utilizada como base para uma instalação interativa baseada na mesma obra.</h4>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+		<div id="jogosCanvas">
+			<p class="back" onclick="showJogos();">Back</p>
 
-			<div id="dropDiv" onclick="select(); window.location='Drop/index.html';">
-				<p id="dropTitle" onmouseover="beep()">Drop</p>
-				<p id="dropInfo">A desolate other world.</p>
-			</div>
+			<h2>Insurrection</h2>
+			<br>
+			<br>
+			<img src="images/Insurrection.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Um "cinematic platformer" num mundo distópico, em desenvolvimento por 8-bit Forgers. O meu cargo é Pixel Artist e Animador, estando encarregue da criação de diferentes conteúdos relacionados com a parte visual do jogo, em conjunto com o resto da equipa de arte.<br><br>Mais informação na nossa página de <a href="https://Facebook.com/8BITForgers">Facebook.</a><br><br>Demo disponível <a href="https://8-bitforgers.itch.io/insurrection">aqui.</a></h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>Drop</h2>
+			<br>
+			<br>
+			<img src="images/drop.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Um jogo 2D de ação pixel art, cujo objetivo é derrotar os vários "Bosses" que vão aparecendo. Um trabalho de grupo realizado por mim, por António Fontes e por Francisco Roma no âmbito da cadeira de "Multimédia" da licenciatura em Design e Multimédia da Universidade de Coimbra. <br><br> O meu papel foi a criação do conceito, o design de gameplay, toda a implementação em HTML, CSS e javascript e a criação da personagem principal e do primeiro background.<br><br>Disponível <a href="Drop/index.html">aqui.</a></h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 
+		</div>
+		<div id="grafCanvas">
+			<p class="back" onclick="showGraf();">Back</p>
+
+			<h2>Logótipo Dinâmico</h2>
+			<br>
+			<br>
+			<img src="images/logo.gif" width="50%"></img>
+			<br>
+			<br>
+			<h4>Um logótipo dinâmico baseado no trabalho de Sebastião Rodrigues. Realizado no âmbito da cadeira de "Design II" da licenciatura em Design e Multimédia da Universidade de Coimbra.</h4>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h2>Ciclo de Conversas</h2>
+			<br>
+			<br>
+			<video controls src="video/promoCiclo.mp4" width="50%"></video>
+			<br>
+			<br>
+			<h4>Identidade criada para o "Ciclo de Conversas", um conjunto de palestras anuais sobre Design e Multimédia. Realizado no âmbito da cadeira de "Design I" da licenciatura em Design e Multimédia da Universidade de Coimbra.</a></h4>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+		<div id="uiCanvas">
+			<p class="back" onclick="showUI();">Back</p>
+
+			<h2>Ikihabara</h2>
+			<br>
+			<br>
+			<img src="images/iki1.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Design de uma aplicação para turistas em Akihabara, Japão. Trabalho de Grupo realizado por mim, por Beatriz Araújo e por Luís Azevedo no âmbito da cadeira de "Design de Meios de Interação" da licenciatura em Design e Multimédia da Universidade de Coimbra.</h4>
+			<br>
+			<br>
+			<img src="images/iki2.png" width="50%"></img>
+			<br>
+			<br>
+			<h4>Foi criado um demo interativo em Figma, simulando as várias interações possíveis. O meu papel incluiu o design da maior parte dos ecrãs em papel, como protótipo de baixa fidelidade, "layout" da aplicação e "user testing" com recurso ao UEQ (User Experience Questionaire).</h4>
+			<br>
+			<br>
+			<br>
+			<br>
 		</div>
 
 		<script type="text/javascript" src="index.js"></script>

@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+}
+
+body {
+	background-color: black;
+	margin: 0;
+	display: flex;
+	justify-content: center; /*Alinhamento Horizontal*/
+	align-items: center; /*Alinhamento Vertical*/
+}
+
+#gameCanvas {
+	position: fixed;
+	top: calc(50%-250);
+	left: calc(50%-500);
+}
+
+#bg1 {
+	position: fixed;
+	top: calc(50%-250);
+	left: calc(50%-500);
+}
+
+#levelInfo {
+	color: white;
+	position: fixed;
+	font-family: 'Press Start 2P';
+	font-size: 16px;
+}

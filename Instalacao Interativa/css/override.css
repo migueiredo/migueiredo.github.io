@@ -1,0 +1,23 @@
+a {
+  color: inherit;
+  font-weight: 600;
+  color: #444444;
+  line-height: 2.0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #aaaaaa;
+}
+
+#navBar {
+	position: fixed;
+	margin-top: 25%;
+	display: all;
+}
+
+@media (max-width: 550px) {
+	#navBar {
+		display: none;
+	}
+}
