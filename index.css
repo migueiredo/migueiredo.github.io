@@ -10,56 +10,94 @@
 
 * {
 	margin: 0;
-	padding-top: 0;
-	color: rgba(255,255,255,0.8);
+	padding: 0;
+	color: rgba(255,255,255,0.9);
 }
 
 body {
-	font-family: "Montserrat";
-	background-color: rgba(0,0,0,1);
+  position: relative;
+	font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  min-height: 295px;
+  min-width: 320px;
+  background-color: rgba(0,0,0,1);
   overflow-x: hidden;
 }
 
 #bg {
-	top: 0;
-	position: fixed;
-	z-index: -2;
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
+  top: 0;
+  position: fixed;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 #cover {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background-color: rgba(0,0,0,0.5);
-	visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0,0,0,0.5);
+  visibility: hidden;
 }
 
-#center {
-	margin-top: 35vh;
+#title-screen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#name-title {
+  position: absolute;
+	top: 35%;
+  width: 100%;
 	text-align: center;
-	text-shadow: 0 0 1px white;
 	z-index: 1;
 }
 
-h1 {
-	font-size: 32px;
+.name, .title {
+  display: block;
   font-family: "Pokemon", "Montserrat";
+  width: 100%;
+}
+
+.name {
+  font-size: 24px;
+  color: rgba(255,255,255,0.9);
+}
+
+.title {
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+}
+
+@keyframes loading-animation {
+  0% {
+    color: rgba(0,0,0,0.9);
+    background-color: rgba(255,255,255,0.8);
+  }
+  49.9% {
+    color: rgba(0,0,0,0.9);
+    background-color: rgba(255,255,255,0.8);
+  }
+  50% {
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.9);
+  }
+  99.9% {
+    color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.9);
+  }
 }
 
 h2 {
 	font-weight: 400;
 	font-size: 24pt;
 	text-shadow: 0 0 1px white;
-}
-
-h3 {
-  font-size: 16px;
-  font-family: "Pokemon";
+  margin: 0 0 50px;
 }
 
 h4 {
@@ -71,6 +109,35 @@ h4 {
 	margin-right: auto;
 	text-shadow: 0 1 2px black;
 	color: white;
+  margin: 20px auto 80px;
+}
+
+.hub-button, .back {
+  position: absolute;
+  font-family: "Pokemon", "Montserrat", sans-serif;
+  font-size: 24px;
+  color: rgba(255,255,255,0.9);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  padding: 0 5px 5px 10px;
+  cursor: pointer;
+  transition: background-color 100ms, color 100ms;
+}
+
+.back {
+  font-size: 16px;
+  top: 40px;
+  left: 40px;
+}
+
+.hub-button:hover, .back:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.hub-button:active, .back:active {
+  transition: background-color 40ms, color 40ms;
+  color: rgba(255, 230, 190, 0.9);
+  background-color: rgba(0,0,0,0.3);
 }
 
 p {
@@ -80,8 +147,6 @@ p {
 	position: fixed;
 	text-align: center;
 	background-color: rgba(255,255,255,0.2);
-	padding-left: 8px;
-	padding-right: 8px;
 	transition: background-color 0.2s, font-size 0.2s;
 }
 
@@ -96,116 +161,90 @@ p:active {
 	font-size: 18.2pt;
 }
 
-#web {
-	left: 12%;
-	top: 25%;
+#l1 {
+	left: 33%;
+	top: 20%;
 }
 
-#anim {
-	left: 12%;
-	top: 45%;
+#r1 {
+  right: 35.5%;
+  top: 20%;
 }
 
-#jogos {
-	left: 12%;
-	top: 65%;
+#l2 {
+	left: 16%;
+	top: 35%;
 }
 
-#ins {
-	right: 12%;
-	top: 25%;
+#r2 {
+	right: 19%;
+	top: 35%;
 }
 
-#graf {
-	right: 12%;
-	top: 45%;
+#l3 {
+	left: 25%;
+	top: 50%;
 }
 
-#ui {
-	right: 12%;
-	top: 65%;
+#r3 {
+  right: 28%;
+  top: 50%;
 }
 
-#webCanvas {
+#l1Canvas {
 	display: none;
-	margin-top: 10%;
 	text-align: center;
 }
 
-#animCanvas {
+#l2Canvas {
 	display: none;
-	margin-top: 10%;
 	text-align: center;
 }
 
-#jogosCanvas {
+#r2Canvas {
 	display: none;
-	margin-top: 10%;
 	text-align: center;
 }
 
-#grafCanvas {
+#l3Canvas {
 	display: none;
-	margin-top: 10%;
 	text-align: center;
 }
 
-#uiCanvas {
+#r1Canvas {
 	display: none;
-	margin-top: 10%;
 	text-align: center;
+}
+
+.file {
+  margin-top: 0;
+  padding: 80px 0;
 }
 
 img, video {
 	width: 50%;
 }
 
-.back {
-	top: 5%;
-	left: 5%;
-}
+@media only screen and (max-width: 1279px) {
 
-@media only screen and (max-width: 600px) {
-
-	#center {
-		margin: 70px auto 70px;
+	#name-title {
+		top: 40%;
 	}
 
-	#web, #anim, #jogos, #ins, #graf, #ui {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
 
-	h1 {
+	.name {
 		font-size: 16px;
 	}
 
-	p {
-		position: static;
-		font-weight: 300;
-		font-size: 16px;
-		margin: 20px;
-		padding: 5px 0;
-	}
-
-	p:hover {
-		cursor: pointer;
-		background-color: rgba(255,255,255,0.5);
-		font-size: 16px;
-	}
-
-	p:active {
-		background-color: rgba(255,255,255,0.4);
-		font-size: 16px;
-	}
+	.hub-button {
+    font-size: 16px;
+  }
 
 	h2 {
 		font-size: 28pt;
 	}
 
-	h3 {
+	.title {
 		font-size: 8px;
 	}
 
@@ -213,7 +252,7 @@ img, video {
 		font-size: 16px;
 		font-weight: 400;
 		width: auto;
-		margin: 0 30px;
+		margin: 10px 30px 50px;
 	}
 
 	img, video {
@@ -247,7 +286,73 @@ img, video {
 		margin: 0;
 		width: 100vw;
 	}
+
+  #l1 {
+    left: 23%;
+  }
+
+  #l2 {
+    left: 6%;
+  }
+
+  #l3 {
+    left: 15%;
+  }
+
+  #r1 {
+    right: 25%;
+  }
+
+  #r2 {
+    right: 9%;
+  }
+
+  #r3 {
+    right: 18%;
+  }
+
+  #l1, #r1 {
+    top: 25%;
+  }
+
+  #l2, #r2 {
+    top: 40%;
+  }
+
+  #l3, #r3 {
+    top: 55%;
+  }
 }
+
+@media only screen and (max-width: 767px) {
+
+  .hub-button {
+    font-size: 16px;
+  }
+
+  #l1, #l2, #l3 {
+    left: 30px;
+    right: auto;
+  }
+
+  #r1, #r2, #r3 {
+    right: 30px;
+    left: auto;
+  }
+
+  #l1, #r1 {
+    top: 180px;
+  }
+
+  #l2, #r2 {
+    top: 280px;
+  }
+
+  #l3, #r3 {
+    top: 380px;
+  }
+}
+
 
 /*--------------------- Glitch Effect ---------------------*/
 
@@ -277,7 +382,7 @@ img, video {
           animation-name: glitch-animation;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
-  left: 4px;
+  left: 2px;
   text-shadow: -1px 0 #ffa800;
   background: rgba(10, 50, 70, 0.2);
 }
@@ -287,7 +392,7 @@ img, video {
           animation-name: glitch-animation-2;
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
-  left: -4px;
+  left: -2px;
   text-shadow: 1px 0 #00d8ff;
   background: rgba(10, 40, 90, 0.1);
 }
@@ -552,5 +657,3 @@ img, video {
   100% {
     clip: rect(38px, 9999px, 49px, 0);
   }
-}
-

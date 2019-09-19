@@ -11,46 +11,53 @@ function initialize() {
 	changeState();
 }
 
+function hideTitleScreen() {
+	let titleScreen = document.getElementById("title-screen");
+	titleScreen.style.display = 'none';
+}
+
+function showTitleScreen() {
+	let titleScreen = document.getElementById("title-screen");
+	titleScreen.style.display = 'block';
+}
+
 function changeState() {
 
 	if (history.state == "home") {
 
-		document.getElementById("webCanvas").style.display = "none";
-		document.getElementById("animCanvas").style.display = "none";
-		document.getElementById("jogosCanvas").style.display = "none";
-		document.getElementById("grafCanvas").style.display = "none";
-		document.getElementById("uiCanvas").style.display = "none";
-		document.getElementById("menu").style.display = "inherit";
+		showTitleScreen();
+
+		let files = document.getElementsByClassName("file");
+
+		for (let i = 0; i < files.length; i++) {
+			files[i].style.display = "none";
+		}
+
 		document.getElementById("cover").style.visibility = "hidden";
 
 	} else if (history.state == "web") {
-
-		document.getElementById("webCanvas").style.display = "inherit";
-		document.getElementById("menu").style.display = "none";
+		hideTitleScreen();
+		document.getElementById("l1Canvas").style.display = "inherit";
 		document.getElementById("cover").style.visibility = "visible";
 
 	} else if (history.state == "anim") {
-
-		document.getElementById("animCanvas").style.display = "inherit";
-		document.getElementById("menu").style.display = "none";
+		hideTitleScreen();
+		document.getElementById("l2Canvas").style.display = "inherit";
 		document.getElementById("cover").style.visibility = "visible";
 
 	} else if (history.state == "graf") {
-
-		document.getElementById("grafCanvas").style.display = "inherit";
-		document.getElementById("menu").style.display = "none";
+		hideTitleScreen();
+		document.getElementById("l3Canvas").style.display = "inherit";
 		document.getElementById("cover").style.visibility = "visible";
 
 	} else if (history.state == "jogos") {
-
-		document.getElementById("jogosCanvas").style.display = "inherit";
-		document.getElementById("menu").style.display = "none";
+		hideTitleScreen();
+		document.getElementById("r2Canvas").style.display = "inherit";
 		document.getElementById("cover").style.visibility = "visible";
 
 	} else if (history.state == "ui") {
-
-		document.getElementById("uiCanvas").style.display = "inherit";
-		document.getElementById("menu").style.display = "none";
+		hideTitleScreen();
+		document.getElementById("r1Canvas").style.display = "inherit";
 		document.getElementById("cover").style.visibility = "visible";
 
 	}
