@@ -224,6 +224,15 @@ img, video {
 	width: 50%;
 }
 
+img[data-src] {
+  filter: blur(0.2em);
+}
+
+img {
+  filter: blur(0em);
+  transition: filter 0.5s;
+}
+
 @media only screen and (max-width: 1279px) {
 
 	#name-title {
