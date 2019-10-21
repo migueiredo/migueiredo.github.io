@@ -38,7 +38,9 @@ var render = function () {
 
 	context.drawImage(background, x, y);
 
-	player.render();
+	if(spritesheetReady) {
+		player.render();
+	}
 }
 
 var main = function () {

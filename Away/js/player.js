@@ -1,4 +1,5 @@
 playerSpritesheet = new Image();
+let spritesheetReady = false;
 
 playerSpritesheet.onload = function () {
 	spritesheetReady = true;
@@ -22,7 +23,7 @@ var Player = function(spritesheet, size){
 	this.impulseY = 15;
 	this.terminalVelocityY = 15;
 	this.velocityY = 0;
-	
+
 	this.frameRate = 5; //12 FPS
 	this.currentFrame = 0;
 	this.clipPosition = 0;
