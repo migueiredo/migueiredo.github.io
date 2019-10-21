@@ -37,9 +37,8 @@ var render = function () {
 	player.normalizedY = player.y + y;
 
 	context.drawImage(background, x, y);
-	if(player.spritesheetReady) {
-		player.render();
-	}
+
+	player.render();
 }
 
 var main = function () {

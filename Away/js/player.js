@@ -1,3 +1,11 @@
+playerSpritesheet = new Image();
+
+playerSpritesheet.onload = function () {
+	spritesheetReady = true;
+};
+
+playerSpritesheet.src = "images/blue.png";
+
 var Player = function(spritesheet, size){
 	this.size = size;
 
@@ -34,7 +42,7 @@ var Player = function(spritesheet, size){
 		this.control();
 		this.x += this.velocityX;
 
-		animate(this.playerSpritesheet, this, this.size, this.size, this.numberFrames);
+		animate(playerSpritesheet, this, this.size, this.size, this.numberFrames);
 	}
 
 	this.control = function(){
