@@ -10,6 +10,8 @@ var groundPosition;
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
+	var sound;
+
 
 //--------Functions--------
 
@@ -20,7 +22,8 @@ function initialize(){
 	player = new Player("images/Blue.png", 64);
 
 	groundPosition = (224*2) - player.size;
-	
+	sound = new Audio("sound/Haikyuu.mp3");
+
 	player.y = groundPosition;
 
 	main();
@@ -44,6 +47,10 @@ var render = function () {
 }
 
 var main = function () {
+
+	if (90 in keysDown) {
+		sound.play();
+	}
 
 	render();
 	requestAnimationFrame(main);
