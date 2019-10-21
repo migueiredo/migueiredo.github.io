@@ -17,7 +17,7 @@ function initialize(){
 	background = new Image();
 	background.src = "images/Fields.png";
 
-	player = new Player("images/blue.png", 64);
+	player = new Player("images/Blue.png", 64);
 
 	groundPosition = (224*2) - player.size;
 	

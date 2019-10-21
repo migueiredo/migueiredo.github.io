@@ -5,7 +5,7 @@ playerSpritesheet.onload = function () {
 	spritesheetReady = true;
 };
 
-playerSpritesheet.src = "images/blue.png";
+playerSpritesheet.src = "images/Blue.png";
 
 var Player = function(spritesheet, size){
 	this.size = size;
