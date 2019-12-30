@@ -9,7 +9,6 @@ function initialize() {
 	}
 
 	changeState();
-	deferredImageLoading();
 }
 
 function hideTitleScreen() {
@@ -111,24 +110,5 @@ function showUI(){
 	} else {
 		history.back();
 		changeState();
-	}
-}
-
-function deferredImageLoading() {
-	let imagesToUpdate = document.querySelectorAll('img[data-src]');
-
-	function updateImageSource(image) {
-		image.setAttribute('src', image.getAttribute('data-src'));
-		image.addEventListener("load", function() {
-			image.removeAttribute('data-src');
-			let nameTitle = document.getElementById("name-title");
-			for (let i = 0; i < nameTitle.children.length; i++) {
-				nameTitle.children[i].classList.add("glitch");
-			}
-		});
-	}
-
-	for (let i = 0; i < imagesToUpdate.length; i++) {
-		updateImageSource(imagesToUpdate[i]);
 	}
 }

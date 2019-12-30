@@ -1,11 +1,17 @@
 @font-face {
-    font-family: "Pocket Red";
-    src: url('pocketred.ttf') format("truetype");
+    font-family: 'Pocket Red';
+    src: url('fonts/PocketRed.woff2') format('woff2'),
+        url('fonts/PocketRed.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Pokemon";
-    src: url('Pokemon.ttf') format("truetype");
+    font-family: 'Pokemon';
+    src: url('fonts/Pokemon-Classic.woff2') format('woff2'),
+        url('fonts/Pokemon-Classic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -16,7 +22,7 @@
 
 body {
   position: relative;
-	font-family: "Montserrat", sans-serif;
+	font-family: sans-serif;
   height: 100vh;
   width: 100vw;
   min-height: 295px;
@@ -59,7 +65,7 @@ body {
 
 .name, .title {
   display: block;
-  font-family: "Pokemon", "Montserrat";
+  font-family: "Pokemon";
   width: 100%;
 }
 
@@ -93,9 +99,9 @@ body {
 }
 
 h2 {
+  font-family: "Pokemon";
 	font-weight: 400;
 	font-size: 24pt;
-	text-shadow: 0 0 1px white;
   margin: 0 0 50px;
 }
 
@@ -162,8 +168,8 @@ p:active {
 }
 
 #l1 {
-	left: 33%;
-	top: 20%;
+  left: 33%;
+  top: 20%;
 }
 
 #r1 {
@@ -172,18 +178,18 @@ p:active {
 }
 
 #l2 {
-	left: 16%;
-	top: 35%;
+  left: 16%;
+  top: 35%;
 }
 
 #r2 {
-	right: 19%;
-	top: 35%;
+  right: 19%;
+  top: 35%;
 }
 
 #l3 {
-	left: 25%;
-	top: 50%;
+  left: 25%;
+  top: 50%;
 }
 
 #r3 {
