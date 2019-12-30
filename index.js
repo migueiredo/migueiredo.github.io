@@ -8,6 +8,7 @@ function initialize() {
 		history.replaceState("home", null, null);
 	}
 
+	addListeners();
 	changeState();
 	deferredImageLoading();
 }
@@ -62,6 +63,13 @@ function changeState() {
 		document.getElementById("cover").style.visibility = "visible";
 
 	}
+}
+
+function addListeners() {
+	document.getElementById("l1").addEventListener("click", showJogos);
+	document.getElementById("r1").addEventListener("click", showAnim);
+	document.getElementById("l2").addEventListener("click", showWeb);
+	document.getElementById("r2").addEventListener("click", showGraf);
 }
 
 function showWeb(){
