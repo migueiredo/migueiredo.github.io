@@ -120,10 +120,10 @@ function deferredImageLoading() {
 	if (image.complete) {
 		image.classList.add('show');
 		image.classList.remove('hide');
-	} else {
-		image.addEventListener("load", function() {
-			image.classList.add('show');
-			image.classList.remove('hide');
-		});
 	}
+
+	image.addEventListener("load", function() {
+		image.classList.add('show');
+		image.classList.remove('hide');
+	});
 }
