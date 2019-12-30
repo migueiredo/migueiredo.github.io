@@ -9,6 +9,7 @@ function initialize() {
 	}
 
 	changeState();
+	deferredImageLoading();
 }
 
 function hideTitleScreen() {
@@ -111,4 +112,13 @@ function showUI(){
 		history.back();
 		changeState();
 	}
+}
+
+function deferredImageLoading() {
+	let image = document.getElementById("bg");
+
+	image.addEventListener("load", function() {
+		image.classList.add('show');
+		image.classList.remove('hide');
+	});
 }

@@ -40,6 +40,14 @@ body {
   object-fit: cover;
 }
 
+.show {
+  transition: opacity 700ms;
+  transition-timing-function: cubic-bezier(0.1, 0, 0.1, 1.0);
+}
+.hide {
+  opacity: 0;
+}
+
 #cover {
   position: fixed;
   top: 0;
