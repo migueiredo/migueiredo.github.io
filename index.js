@@ -70,14 +70,22 @@ function addListeners() {
 	document.getElementById("r1").addEventListener("click", showAnim);
 	document.getElementById("l2").addEventListener("click", showWeb);
 	document.getElementById("r2").addEventListener("click", showGraf);
+
+	let backButtons = document.getElementsByClassName("back");
+
+	for (let i = 0; i < backButtons.length; i++) {
+		backButtons[i].addEventListener("click", back);
+	}
+}
+
+function back() {
+	history.back();
+	changeState();
 }
 
 function showWeb(){
 	if (history.state == "home"){
 		history.pushState("web", null, null);
-		changeState();
-	} else {
-		history.back();
 		changeState();
 	}
 }
@@ -86,18 +94,12 @@ function showAnim(){
 	if (history.state == "home"){
 		history.pushState("anim", null, null);
 		changeState();
-	} else {
-		history.back();
-		changeState();
 	}
 }
 
 function showJogos(){
 	if (history.state == "home"){
 		history.pushState("jogos", null, null);
-		changeState();
-	} else {
-		history.back();
 		changeState();
 	}
 }
@@ -106,18 +108,12 @@ function showGraf(){
 	if (history.state == "home"){
 		history.pushState("graf", null, null);
 		changeState();
-	} else {
-		history.back();
-		changeState();
 	}
 }
 
 function showUI(){
 	if (history.state == "home"){
 		history.pushState("ui", null, null);
-		changeState();
-	} else {
-		history.back();
 		changeState();
 	}
 }
