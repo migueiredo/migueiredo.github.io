@@ -62,6 +62,11 @@ function changeState() {
 		document.getElementById("r1Canvas").style.display = "inherit";
 		document.getElementById("cover").style.visibility = "visible";
 
+	} else if (history.state == "contact") {
+		hideTitleScreen();
+		document.getElementById("r3Canvas").style.display = "inherit";
+		document.getElementById("cover").style.visibility = "visible";
+
 	}
 }
 
@@ -70,6 +75,8 @@ function addListeners() {
 	document.getElementById("r1").addEventListener("click", showAnim);
 	document.getElementById("l2").addEventListener("click", showWeb);
 	document.getElementById("r2").addEventListener("click", showGraf);
+	document.getElementById("l3").addEventListener("click", showUI);
+	document.getElementById("r3").addEventListener("click", showContact);
 
 	let backButtons = document.getElementsByClassName("back");
 
@@ -114,6 +121,13 @@ function showGraf(){
 function showUI(){
 	if (history.state == "home"){
 		history.pushState("ui", null, null);
+		changeState();
+	}
+}
+
+function showContact(){
+	if (history.state == "home"){
+		history.pushState("contact", null, null);
 		changeState();
 	}
 }
