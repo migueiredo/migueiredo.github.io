@@ -111,6 +111,7 @@ h2 {
 	font-weight: 400;
 	font-size: 24pt;
   margin: 0 0 50px;
+	text-align: center;
 }
 
 h4 {
@@ -264,7 +265,7 @@ img {
   }
 
 	h2 {
-		font-size: 28pt;
+		font-size: 20pt;
 	}
 
 	.title {
